@@ -159,7 +159,7 @@ class CatUserBotClient(TelegramClient):
                                   \nwe logged only fact of error and date,\nwe respect your privacy,\
                                   \nyou may not report this error if you've\
                                   \nany confidential data here, no one will see your data\
-                                  \n\n--------BEGIN USERBOT TRACEBACK LOG--------\
+                                  \n\n--------BEGIN Ano TRACEBACK LOG--------\
                                   \nDate: {date}\nGroup ID: {str(check.chat_id)}\
                                   \nSender ID: {str(check.sender_id)}\
                                   \nMessage Link: {await check.client.get_msg_link(check)}\
@@ -170,7 +170,7 @@ class CatUserBotClient(TelegramClient):
                             "error": str(sys.exc_info()[1]),
                             "date": datetime.datetime.now(),
                         }
-                        ftext += "\n\n--------END USERBOT TRACEBACK LOG--------"
+                        ftext += "\n\n--------END Ano TRACEBACK LOG--------"
                         command = 'git log --pretty=format:"%an: %s" -5'
                         ftext += "\n\n\nLast 5 commits:\n"
                         output = (await runcmd(command))[:2]
@@ -179,8 +179,8 @@ class CatUserBotClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        text = "**CatUserbot Error report**\n\n"
-                        link = "[here](https://t.me/catuserbot_support)"
+                        text = "**Ano bot Error report**\n\n"
+                        link = "[here](https://t.me/GraphicCommunity4)"
                         text += "If you wanna you can report it"
                         text += f"- just forward this message {link}.\n"
                         text += (
@@ -276,7 +276,7 @@ class CatUserBotClient(TelegramClient):
                                     \nwe logged only fact of error and date,\nwe respect your privacy,\
                                     \nyou may not report this error if you've\
                                     \nany confidential data here, no one will see your data\
-                                    \n\n--------BEGIN USERBOT TRACEBACK LOG--------\
+                                    \n\n--------BEGIN Ano TRACEBACK LOG--------\
                                     \nDate: {date}\nGroup ID: {str(check.chat_id)}\
                                     \nSender ID: {str(check.sender_id)}\
                                     \nMessage Link: {await check.client.get_msg_link(check)}\
@@ -287,7 +287,7 @@ class CatUserBotClient(TelegramClient):
                             "error": str(sys.exc_info()[1]),
                             "date": datetime.datetime.now(),
                         }
-                        ftext += "\n\n--------END USERBOT TRACEBACK LOG--------"
+                        ftext += "\n\n--------END Ano TRACEBACK LOG--------"
                         command = 'git log --pretty=format:"%an: %s" -5'
                         ftext += "\n\n\nLast 5 commits:\n"
                         output = (await runcmd(command))[:2]
@@ -297,7 +297,7 @@ class CatUserBotClient(TelegramClient):
                             ftext, pastetype="s", markdown=False
                         )
                         text = "**CatUserbot Error report**\n\n"
-                        link = "[here](https://t.me/catuserbot_support)"
+                        link = "[here](https://t.me/GraphicCommunity4)"
                         text += "If you wanna you can report it"
                         text += f"- just forward this message {link}.\n"
                         text += (
