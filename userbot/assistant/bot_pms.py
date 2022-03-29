@@ -106,18 +106,18 @@ async def bot_start(event):
             start_msg = f"Hey! 👤{mention},\
                         \nI am {my_mention}'s assistant bot.\
                         \nYou can contact to my master from here.\
-                        \n\nPowered by [Catuserbot](https://t.me/catuserbot)"
+                        \n\nPowered by Mr Ano(https://t.me/Unknown_Helper_O02)"
         buttons = [
             (
-                Button.url("Repo", "https://github.com/TgCatUB/catuserbot"),
+                Button.url("Our Main Group", "https://t.me/GraphicCommunity4"),
                 Button.url(
-                    "Deploy",
-                    "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack&template=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack",
+                    "Backup Channel",
+                    "https://t.me/MrAnonymouso02",
                 ),
             )
         ]
     else:
-        start_msg = "Hey Master!\
+        start_msg = "Hey Boss!\
             \nHow can i help you ?"
         buttons = None
     try:
