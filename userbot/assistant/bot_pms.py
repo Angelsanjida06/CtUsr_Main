@@ -105,8 +105,8 @@ async def bot_start(event):
         else:
             start_msg = f"Hey! 👤{mention},\
                         \nI am {my_mention}'s assistant bot.\
-                        \nYou can contact to my master from here.\
-                        \n\nPowered by Mr Ano(https://t.me/Unknown_Helper_O02)"
+                        \nYou can contact to my Owner from here..\
+                        \n\nPowered by [Mr Ano](https://t.me/Unknown_Helper_O02)"
         buttons = [
             (
                 Button.url("Our Main Group", "https://t.me/GraphicCommunity4"),
