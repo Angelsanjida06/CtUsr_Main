@@ -420,8 +420,8 @@ async def inline_handler(event):  # sourcery no-metrics
         elif string == "help":
             _result = main_menu()
             result = builder.article(
-                title="© CatUserbot Help",
-                description="Help menu for CatUserbot",
+                title="© AnoBot Help",
+                description="Help menu for Ano bot",
                 text=_result[0],
                 buttons=_result[1],
                 link_preview=False,
