@@ -63,7 +63,7 @@ async def startupmessage():
                 BOTLOG_CHATID,
                 "https://telegra.ph/file/49fa41b0e2783ef91aec3.jpg",
                 caption="**Your AnoBot has been started successfully..**",
-                buttons=[(Button.url("Owner", "https://t.me/catuserbot"),)],
+                buttons=[(Button.url("Owner", "https://t.me/Unknown_Helper_O02"),)],
             )
     except Exception as e:
         LOGS.error(e)
