@@ -131,7 +131,7 @@ async def on_afk(event):  # sourcery no-metrics
                     f"`I am AFK .\n\nAFK Since {endtime}\nReason : {AFK_.reason}`"
                 )
             else:
-                message_to_reply = f"`I am AFK .\n\nAFK Since {endtime}\nReason : Not Mentioned ( ಠ ʖ̯ ಠ)`"
+                message_to_reply = f"`I am Angela, Assistant Bot .\n\nInactive Since {endtime}\nReason : Not Mentioned ( ಠ ʖ̯ ಠ)`"
             if event.chat_id:
                 msg = await event.reply(message_to_reply)
         if event.chat_id in AFK_.last_afk_message:
@@ -148,7 +148,7 @@ async def on_afk(event):  # sourcery no-metrics
         except Exception as e:
             LOGS.info(str(e))
         messaget = media_type(event)
-        resalt = f"#AFK_TAGS \n<b>Group : </b><code>{hmm.title}</code>"
+        resalt = f"#Inactive_TAGS \n<b>Group : </b><code>{hmm.title}</code>"
         if full is not None:
             resalt += f"\n<b>From : </b> 👤{_format.htmlmentionuser(full.first_name , full.id)}"
         if messaget is not None:
@@ -178,11 +178,11 @@ async def on_afk(event):  # sourcery no-metrics
             "{tr}afk <reason> ; <link>",
         ],
         "examples": "{tr}afk Let Me Sleep",
-        "note": "Switches off AFK when you type back anything, anywhere. You can use #afk in message to continue in afk without breaking it",
+        "note": "Switches off Inactive mode when you type back anything, anywhere. You can use #Inactive in message to continue in afk without breaking it",
     },
 )
 async def _(event):
-    "To mark yourself as afk i.e. Away from keyboard"
+    "To mark yourself as Inactive mode i.e. Away from keyboard"
     AFK_.USERAFK_ON = {}
     AFK_.afk_time = None
     AFK_.last_afk_message = {}
@@ -216,12 +216,12 @@ async def _(event):
             if AFK_.reason:
                 await event.client.send_message(
                     BOTLOG_CHATID,
-                    f"#AFKTRUE \nSet AFK mode to True, and Reason is {AFK_.reason}",
+                    f"#InactiveTRUE \nSet Inactive mode to True, and Reason is {AFK_.reason}",
                 )
             else:
                 await event.client.send_message(
                     BOTLOG_CHATID,
-                    "#AFKTRUE \nSet AFK mode to True, and Reason is Not Mentioned",
+                    "#InactiveTRUE \nSet Inactive mode to True, and Reason is Not Mentioned",
                 )
 
 
@@ -272,18 +272,18 @@ async def _(event):
         AFK_.USERAFK_ON = f"on: {AFK_.reason}"
         if AFK_.reason:
             await edit_delete(
-                event, f"`I shall be Going afk! because ~` {AFK_.reason}", 5
+                event, f"`I shall be Going Inactive mode! because ~` {AFK_.reason}", 5
             )
         else:
-            await edit_delete(event, "`I shall be Going afk! `", 5)
+            await edit_delete(event, "`I shall be Going Inactive mode! `", 5)
         AFK_.media_afk = await reply.forward_to(BOTLOG_CHATID)
         if AFK_.reason:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                f"#AFKTRUE \nSet AFK mode to True, and Reason is {AFK_.reason}",
+                f"#InactiveTRUE \nSet Inactive mode to True, and Reason is {AFK_.reason}",
             )
         else:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "#AFKTRUE \nSet AFK mode to True, and Reason is Not Mentioned",
+                "#InactiveTRUE \nSet Inactive mode to True, and Reason is Not Mentioned",
             )
